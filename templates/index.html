@@ -1,0 +1,457 @@
+{% load static %}
+{% static "images" as baseUrl%}
+<!DOCTYPE html>
+<html lang="en"><!-- Basic -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+     <!-- Site Metas -->
+    <title>Health Monitor</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+
+    <link rel="shortcut icon" href="{%static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{%static 'images/apple-touch-icon.png' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="{%static 'css/pogo-slider.min.css' %}">
+	<!-- Site CSS -->
+    <link rel = "stylesheet" href="{%static 'css/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{%static 'css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{%static 'css/custom.css' %}">
+
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+{% block content %}
+
+
+
+	<!-- LOADER -->
+     <!-- <div id="preloader">
+		<div class="loader">
+			<img src="images/preloader.gif" alt="" />
+		</div>
+    </div>end loader -->
+    <!-- END LOADER -->
+
+	<!-- Start top bar -->
+	<div class="main-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="left-top">
+						
+						<div class="mail-b"><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> Aashishrestha14@gmail.com</a></div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="wel-nots">
+						<p>Welcome to Our Health Monitor!</p>
+					</div>
+					<div class="right-top">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.youtube.com/channel/UCub5Ij3pmF-JJomKG_S3quA/feed"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End top bar -->
+
+	<!-- Start header -->
+	<header class="top-header">
+		<nav class="navbar header-nav navbar-expand-lg">
+            <div class="container">
+				<a class="navbar-brand" href="#home"><img src="{%static 'images/logo.png' %}" alt="image"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link active" href="#home">Home</a></li>
+                        <li><a class="nav-link" href="#about">About Us</a></li>
+						<li><a class="nav-link" href="#healthcon">Health Conditions</a></li>
+                        <li><a class="nav-link" href="#services">Services</a></li>
+
+                        <li><a class="nav-link" href="#gallery">Gallery</a></li>
+						<li><a class="nav-link" href="contact">Contact</a></li>
+
+						{% if user.is_authenticated %}
+						<li>Hello, {{user.first_name}}</li>
+						<li><a class="nav-link" href="accounts/logout">logout</a></li>
+						{% else %}
+						<li><a class="nav-link" href="accounts/login">login</a></li>
+						<li><a class="nav-link" href="accounts/register">Register</a></li>
+						{% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+	</header>
+	<!-- End header -->
+
+	<!-- Start Banner -->
+	<div class="ulockd-home-slider">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="pogoSlider" id="js-main-slider">
+					<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url({%static 'images/slider-01.jpg' %});">
+						<div class="lbox-caption pogoSlider-slide-element">
+							<div class="lbox-details">
+								<h1>Welcome to Health Monitor</h1>
+
+								<a href="contact" class="btn">Contact Us</a>
+							</div>
+						</div>
+					</div>
+					<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url({%static 'images/slider-02.jpg' %});">
+						<div class="lbox-caption pogoSlider-slide-element">
+							<div class="lbox-details">
+								<h1>Eat Right , Be Right</h1>
+
+
+							</div>
+						</div>
+					</div>
+					<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url({%static 'images/slider-03.jpg' %});">
+						<div class="lbox-caption pogoSlider-slide-element">
+							<div class="lbox-details">
+								<h1>Welcome to Health Monitor</h1>
+
+								<a href="contact" class="btn">Contact Us</a>
+							</div>
+						</div>
+
+					</div>
+				</div><!-- .pogoSlider -->
+			</div>
+		</div>
+	</div>
+	<!-- End Banner -->
+
+	<!-- Start About us -->
+	<div id="about" class="about-box">
+		<div class="about-a1">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="title-box">
+							<h2>About Us</h2>
+
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="row align-items-center about-main-info">
+							<div class="col-lg-6 col-md-6 col-sm-12">
+								<h2> Welcome to Health Monitor </h2>
+								<p> Welcome to Health Monitor, your number one source for all Health Tips. We're dedicated to providing you the very best of Health Tips, with an emphasis on eating, physical activity and exercise, mental health and lifestyle. </p>
+								<p> Founded in 2019 by Aashish, Health Monitor has come a long way from its beginnings. When Aashish first started out, his passion for "Eat healthy, Be healthy" drove them to start their own business.
+									We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us. </p>
+
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12">
+								<div class="about-m">
+									<ul id="banner">
+										<li>
+											<img src="{%static 'images/about-img-01.jpg' %}" alt="">
+										</li>
+										<li>
+											<img src="{%static 'images/about-img-02.jpg' %}" alt="">
+										</li>
+										<li>
+											<img src="{%static 'images/about-img-03.jpg' %}" alt="">
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End About us -->
+
+	<!-- Start Health Conditions -->
+	<div id="healthcon" class="blog-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Health Conditions</h2>
+						<p>learn about health disease from here </p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="blog-inner">
+						<div class="blog-img">
+							<img class="img-fluid" src="{%static 'images/allergy.jpg' %}" alt="" />
+						</div>
+						<div class="item-meta">
+
+							<a href="#"><i class="fa fa-user-o"></i> Admin</a>
+
+						</div>
+						<h2>What are Allergies?</h2>
+						<p>Allergies are caused by the body's overzealous reaction to normally harmless substances. It can be triggered by pollen, animal dander, mold, dust, and insect droppings, or by certain foods or insect stings. Upper respiratory allergy symptoms include runny nose, itchy eyes, coughing, wheezing, and sneezing. </p>
+
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="blog-inner">
+						<div class="blog-img">
+							<img class="img-fluid" src="{%static 'images/anxiety.jpg' %}" alt="" />
+						</div>
+						<div class="item-meta">
+
+							<a href="#"><i class="fa fa-user-o"></i> Admin</a>
+
+						</div>
+						<h2>What is Anxiety? </h2>
+						<p>Feeling extreme fear or worry can be a problem, particularly if it interferes with daily life. There are many types of anxiety disorders, including obsessive-compulsive disorder, panic disorder, and post-traumatic stress disorder (PTSD). </p>
+
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="blog-inner">
+						<div class="blog-img">
+							<img class="img-fluid" src="{%static 'images/depression.jpg' %}" alt="" />
+						</div>
+						<div class="item-meta">
+
+							<a href="#"><i class="fa fa-user-o"></i> Admin</a>
+
+						</div>
+						<h2>What is Depression? </h2>
+						<p>Depression is a common yet complex mental health condition. People with depression feel sad, empty, or hopeless much of the time. It’s more than a case of the blues; depression looms like a storm cloud that won’t let sunshine peak through. </p>
+
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="blog-inner">
+						<div class="blog-img">
+							<img class="img-fluid" src="{%static 'images/psoriasis.jpg' %}" alt="" />
+						</div>
+						<div class="item-meta">
+
+							<a href="#"><i class="fa fa-user-o"></i> Admin</a>
+
+						</div>
+						<h2>What is Psoriasis?</h2>
+						<p>Psoriasis is a disease in which red, scaly patches form on the skin, typically on the elbows, knees, or scalp. An estimated 7.5 million people in the United States will develop the disease, most of them between the ages of 15 and 30.</p>
+
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="blog-inner">
+						<div class="blog-img">
+							<img class="img-fluid" src="{%static 'images/diabetes.jpg' %}" alt="" />
+						</div>
+						<div class="item-meta">
+
+							<a href="#"><i class="fa fa-user-o"></i> Admin</a>
+
+						</div>
+						<h2>What is Type 2 Diabetes?</h2>
+						<p>People with type 2 diabetes can’t properly use or store glucose, either because their cells resist it. Over time, glucose builds up in the bloodstream, which can lead to serious health complications unless people take steps to manage their blood sugar. </p>
+
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="blog-inner">
+						<div class="blog-img">
+							<img class="img-fluid" src="{%static 'images/pneumonia.jpg' %}" alt="" />
+						</div>
+						<div class="item-meta">
+
+							<a href="#"><i class="fa fa-user-o"></i> Admin</a>
+
+						</div>
+						<h2>What is Pneumonia?</h2>
+						<p>Pneumonia is an infection in one or both lungs. Bacteria, viruses, and fungi cause it. The infection causes inflammation in the air sacs in your lungs, which are called alveoli. The alveoli fill with fluid or pus, making it difficult to breathe. </p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Health Conditions -->
+	<!-- Start Services -->
+	<div id="services" class="services-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Services</h2>
+						<p>Get our service here </p>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="row">
+				<div class="col-lg-12">
+
+						{% if user.is_authenticated %}
+						<div class="item">
+							<div class="serviceBox">
+								<div class="service-icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
+								<h3 class="title">Pneumonia Detection</h3>
+								<p class="description">
+									Get our Service Access from here.
+								</p>
+								<a href=" http://127.0.0.1:5000/ " class="new-btn-d br-2">Click Here!!!</a>
+							</div>
+						</div>
+						{% else %}
+
+						<div class="item">
+							<div class="serviceBox">
+								<div class="service-icon"><i class="fa fa-h-square" aria-hidden="true"></i></div>
+								<h3 class="title">lOGIN</h3>
+								<p class="description">
+									Login first to access our service
+								</p>
+								<a href="accounts/login" class="new-btn-d br-2">login from here</a>
+							</div>
+						</div>
+						{% endif %}
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Services -->
+
+
+
+	<!-- Start Gallery -->
+	<div id="gallery" class="gallery-box">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Gallery</h2>
+						<p>Get Daily Health Tips Update from below Images </p>
+					</div>
+				</div>
+			</div>
+
+			<div class="popup-gallery row clearfix">
+
+				{% for gall in galls %}
+				<div class="col-md-3 col-sm-6">
+					<div class="box-gallery">
+						<img src="{{gall.img.url}}" alt="">
+						<div class="box-content">
+							<h3 class="title">Health Tips</h3>
+							<ul class="icon">
+								<li><a href="{{baseUrl}}/{{gall.img}}"><i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>
+	<!-- End Gallery -->
+
+
+	<!-- Start Subscribe -->
+	<div class="subscribe-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="subscribe-inner text-center clearfix">
+						<h2>Subscribe</h2>
+						<p>Subscribe here to get updates!!</p>
+						<form action="" method="post">
+							{% csrf_token %}
+							<div class="form-group">
+								<input class="form-control-1" id="email-1" name="email" placeholder="Email Address" required="" type="text">
+							</div>
+							<div class="form-group">
+								<button type="submit" class="new-btn-d br-2" onclick="return alert('Thanks for Subscribing">
+									Subscribe
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Subscribe -->
+
+	<!-- Start Footer -->
+	<footer class="footer-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<p class="footer-company-name">All Rights Reserved. &copy; 2020 <a href="#">Health Monitor</a> Design By : <a href="http://127.0.0.1:8000/">Aashish Shrestha</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+
+	<a href="#" id="scroll-to-top" class="new-btn-d br-2"><i class="fa fa-angle-up"></i></a>
+
+	<!-- ALL JS FILES -->
+	<script src="{%static 'js/jquery.min.js' %}"></script>
+	<script src="{%static 'js/popper.min.js' %}"></script>
+	<script src="{%static 'js/bootstrap.min.js' %}"></script>
+    <!-- ALL PLUGINS -->
+	<script src="{%static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{%static 'js/jquery.pogo-slider.min.js' %}"></script>
+	<script src="{%static 'js/slider-index.js' %}"></script>
+	<script src="{%static 'js/smoothscroll.js' %}"></script>
+	<script src="{%static 'js/TweenMax.min.js' %}"></script>
+	<script src="{%static 'js/main.js' %}"></script>
+	<script src="{%static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{%static 'js/form-validator.min.js' %}"></script>
+    <script src="{%static 'js/contact-form-script.js' %}"></script>
+	<script src="{%static 'js/isotope.min.js' %}"></script>
+	<script src="{%static 'js/images-loded.min.js' %}"></script>
+    <script src="{%static 'js/custom.js' %}"></script>
+{% endblock %}
+
+</body>
+</html>
+
